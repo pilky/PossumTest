@@ -13,7 +13,8 @@
 - (void)setUp
 {
     [super setUp];
-    
+	NSLog(@"arg:%@", [[NSProcessInfo processInfo] arguments]);
+    NSLog(@"env:%@", [[NSProcessInfo processInfo] environment]);
     // Set-up code here.
 }
 
