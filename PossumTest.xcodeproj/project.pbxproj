@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99C4B925144AEF5C00FC8A13 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C4B924144AEF5C00FC8A13 /* Cocoa.framework */; };
+		99C4B92F144AEF5C00FC8A13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99C4B92D144AEF5C00FC8A13 /* InfoPlist.strings */; };
+		99C4B933144AEF5C00FC8A13 /* PossumTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C4B932144AEF5C00FC8A13 /* PossumTest.m */; };
+		99C4B93B144AEF5C00FC8A13 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C4B93A144AEF5C00FC8A13 /* SenTestingKit.framework */; };
+		99C4B93C144AEF5C00FC8A13 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C4B924144AEF5C00FC8A13 /* Cocoa.framework */; };
+		99C4B93F144AEF5C00FC8A13 /* PossumTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C4B921144AEF5C00FC8A13 /* PossumTest.framework */; };
+		99C4B945144AEF5C00FC8A13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99C4B943144AEF5C00FC8A13 /* InfoPlist.strings */; };
+		99C4B948144AEF5C00FC8A13 /* PossumTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C4B947144AEF5C00FC8A13 /* PossumTestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99C4B93D144AEF5C00FC8A13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99C4B917144AEF5C00FC8A13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99C4B920144AEF5C00FC8A13;
+			remoteInfo = PossumTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		99C4B921144AEF5C00FC8A13 /* PossumTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PossumTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99C4B924144AEF5C00FC8A13 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		99C4B927144AEF5C00FC8A13 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		99C4B928144AEF5C00FC8A13 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		99C4B929144AEF5C00FC8A13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		99C4B92C144AEF5C00FC8A13 /* PossumTest-Info.plist */ = {isa = PBXFileReference; path = "PossumTest-Info.plist"; sourceTree = "<group>"; };
+		99C4B92E144AEF5C00FC8A13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		99C4B930144AEF5C00FC8A13 /* PossumTest-Prefix.pch */ = {isa = PBXFileReference; path = "PossumTest-Prefix.pch"; sourceTree = "<group>"; };
+		99C4B931144AEF5C00FC8A13 /* PossumTest.h */ = {isa = PBXFileReference; path = PossumTest.h; sourceTree = "<group>"; };
+		99C4B932144AEF5C00FC8A13 /* PossumTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PossumTest.m; sourceTree = "<group>"; };
+		99C4B939144AEF5C00FC8A13 /* PossumTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PossumTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99C4B93A144AEF5C00FC8A13 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		99C4B942144AEF5C00FC8A13 /* PossumTestTests-Info.plist */ = {isa = PBXFileReference; path = "PossumTestTests-Info.plist"; sourceTree = "<group>"; };
+		99C4B944144AEF5C00FC8A13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		99C4B946144AEF5C00FC8A13 /* PossumTestTests.h */ = {isa = PBXFileReference; path = PossumTestTests.h; sourceTree = "<group>"; };
+		99C4B947144AEF5C00FC8A13 /* PossumTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PossumTestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99C4B91D144AEF5C00FC8A13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C4B925144AEF5C00FC8A13 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99C4B935144AEF5C00FC8A13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C4B93B144AEF5C00FC8A13 /* SenTestingKit.framework in Frameworks */,
+				99C4B93C144AEF5C00FC8A13 /* Cocoa.framework in Frameworks */,
+				99C4B93F144AEF5C00FC8A13 /* PossumTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99C4B915144AEF5C00FC8A13 = {
+			isa = PBXGroup;
+			children = (
+				99C4B92A144AEF5C00FC8A13 /* PossumTest */,
+				99C4B940144AEF5C00FC8A13 /* PossumTestTests */,
+				99C4B923144AEF5C00FC8A13 /* Frameworks */,
+				99C4B922144AEF5C00FC8A13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99C4B922144AEF5C00FC8A13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99C4B921144AEF5C00FC8A13 /* PossumTest.framework */,
+				99C4B939144AEF5C00FC8A13 /* PossumTestTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99C4B923144AEF5C00FC8A13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99C4B924144AEF5C00FC8A13 /* Cocoa.framework */,
+				99C4B93A144AEF5C00FC8A13 /* SenTestingKit.framework */,
+				99C4B926144AEF5C00FC8A13 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99C4B926144AEF5C00FC8A13 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99C4B927144AEF5C00FC8A13 /* AppKit.framework */,
+				99C4B928144AEF5C00FC8A13 /* CoreData.framework */,
+				99C4B929144AEF5C00FC8A13 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		99C4B92A144AEF5C00FC8A13 /* PossumTest */ = {
+			isa = PBXGroup;
+			children = (
+				99C4B931144AEF5C00FC8A13 /* PossumTest.h */,
+				99C4B932144AEF5C00FC8A13 /* PossumTest.m */,
+				99C4B92B144AEF5C00FC8A13 /* Supporting Files */,
+			);
+			path = PossumTest;
+			sourceTree = "<group>";
+		};
+		99C4B92B144AEF5C00FC8A13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99C4B92C144AEF5C00FC8A13 /* PossumTest-Info.plist */,
+				99C4B92D144AEF5C00FC8A13 /* InfoPlist.strings */,
+				99C4B930144AEF5C00FC8A13 /* PossumTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99C4B940144AEF5C00FC8A13 /* PossumTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				99C4B946144AEF5C00FC8A13 /* PossumTestTests.h */,
+				99C4B947144AEF5C00FC8A13 /* PossumTestTests.m */,
+				99C4B941144AEF5C00FC8A13 /* Supporting Files */,
+			);
+			path = PossumTestTests;
+			sourceTree = "<group>";
+		};
+		99C4B941144AEF5C00FC8A13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99C4B942144AEF5C00FC8A13 /* PossumTestTests-Info.plist */,
+				99C4B943144AEF5C00FC8A13 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		99C4B91E144AEF5C00FC8A13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		99C4B920144AEF5C00FC8A13 /* PossumTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99C4B94B144AEF5C00FC8A13 /* Build configuration list for PBXNativeTarget "PossumTest" */;
+			buildPhases = (
+				99C4B91C144AEF5C00FC8A13 /* Sources */,
+				99C4B91D144AEF5C00FC8A13 /* Frameworks */,
+				99C4B91E144AEF5C00FC8A13 /* Headers */,
+				99C4B91F144AEF5C00FC8A13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PossumTest;
+			productName = PossumTest;
+			productReference = 99C4B921144AEF5C00FC8A13 /* PossumTest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		99C4B938144AEF5C00FC8A13 /* PossumTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99C4B94E144AEF5C00FC8A13 /* Build configuration list for PBXNativeTarget "PossumTestTests" */;
+			buildPhases = (
+				99C4B934144AEF5C00FC8A13 /* Sources */,
+				99C4B935144AEF5C00FC8A13 /* Frameworks */,
+				99C4B936144AEF5C00FC8A13 /* Resources */,
+				99C4B937144AEF5C00FC8A13 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99C4B93E144AEF5C00FC8A13 /* PBXTargetDependency */,
+			);
+			name = PossumTestTests;
+			productName = PossumTestTests;
+			productReference = 99C4B939144AEF5C00FC8A13 /* PossumTestTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99C4B917144AEF5C00FC8A13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "M Cubed Software";
+			};
+			buildConfigurationList = 99C4B91A144AEF5C00FC8A13 /* Build configuration list for PBXProject "PossumTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 99C4B915144AEF5C00FC8A13;
+			productRefGroup = 99C4B922144AEF5C00FC8A13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99C4B920144AEF5C00FC8A13 /* PossumTest */,
+				99C4B938144AEF5C00FC8A13 /* PossumTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99C4B91F144AEF5C00FC8A13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C4B92F144AEF5C00FC8A13 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99C4B936144AEF5C00FC8A13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C4B945144AEF5C00FC8A13 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		99C4B937144AEF5C00FC8A13 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99C4B91C144AEF5C00FC8A13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C4B933144AEF5C00FC8A13 /* PossumTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99C4B934144AEF5C00FC8A13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99C4B948144AEF5C00FC8A13 /* PossumTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99C4B93E144AEF5C00FC8A13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99C4B920144AEF5C00FC8A13 /* PossumTest */;
+			targetProxy = 99C4B93D144AEF5C00FC8A13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99C4B92D144AEF5C00FC8A13 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99C4B92E144AEF5C00FC8A13 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		99C4B943144AEF5C00FC8A13 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99C4B944144AEF5C00FC8A13 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99C4B949144AEF5C00FC8A13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		99C4B94A144AEF5C00FC8A13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		99C4B94C144AEF5C00FC8A13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PossumTest/PossumTest-Prefix.pch";
+				INFOPLIST_FILE = "PossumTest/PossumTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		99C4B94D144AEF5C00FC8A13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PossumTest/PossumTest-Prefix.pch";
+				INFOPLIST_FILE = "PossumTest/PossumTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		99C4B94F144AEF5C00FC8A13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PossumTest/PossumTest-Prefix.pch";
+				INFOPLIST_FILE = "PossumTestTests/PossumTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		99C4B950144AEF5C00FC8A13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PossumTest/PossumTest-Prefix.pch";
+				INFOPLIST_FILE = "PossumTestTests/PossumTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99C4B91A144AEF5C00FC8A13 /* Build configuration list for PBXProject "PossumTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99C4B949144AEF5C00FC8A13 /* Debug */,
+				99C4B94A144AEF5C00FC8A13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99C4B94B144AEF5C00FC8A13 /* Build configuration list for PBXNativeTarget "PossumTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99C4B94C144AEF5C00FC8A13 /* Debug */,
+				99C4B94D144AEF5C00FC8A13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		99C4B94E144AEF5C00FC8A13 /* Build configuration list for PBXNativeTarget "PossumTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99C4B94F144AEF5C00FC8A13 /* Debug */,
+				99C4B950144AEF5C00FC8A13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99C4B917144AEF5C00FC8A13 /* Project object */;
+}
