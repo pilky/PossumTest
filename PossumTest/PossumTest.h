@@ -37,7 +37,7 @@ Launch app
 #import "POSMenuItem.h"
 #import "POSControl.h"
 #import "POSButton.h"
-#import "POSCheckbox.h"
+#import "POSPopUpButton.h"
 #import "POSRadioGroup.h"
 #import "POSTextField.h"
 #import "POSSearchField.h"

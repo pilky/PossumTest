@@ -10,11 +10,20 @@
 
 @implementation POSObject
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
+- (NSArray *)children {
+	return nil;
+}
+
+- (NSSize)size {
+	return nil;
+}
+
+- (NSPoint)positionOnScreen {
+	return nil;
+}
+
+- (POSObject *)parent {
+	return nil;
 }
 
 @end

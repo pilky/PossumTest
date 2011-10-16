@@ -16,16 +16,17 @@
 
 - (void)relaunch;
 
-
-@property (readonly) NSArray *windows;
-- (POSWindow *)windowWithIdentifier:(NSString *)aIdentifier;
-
 @property (readonly) NSString *title;
 @property (assign, getter = isFrontmost) BOOL frontmost;
 @property (assign, getter = isHidden) BOOL hidden;
+
+
 @property (readonly) POSWindow *mainWindow;
 @property (readonly) POSWindow *focusedWindow;
 @property (readonly) POSUIElement *focusedUIElement;
 @property (readonly) POSMenuBar *menuBar;
+
+@property (readonly) NSArray *windows;
+- (POSWindow *)windowWithIdentifier:(NSString *)aIdentifier;
 
 @end

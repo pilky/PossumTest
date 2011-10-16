@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		993EBB0D144B66F100A8864D /* M3AccessibilityController.h in Headers */ = {isa = PBXBuildFile; fileRef = 993EBB09144B66F100A8864D /* M3AccessibilityController.h */; };
+		993EBB0E144B66F100A8864D /* M3AccessibilityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 993EBB0A144B66F100A8864D /* M3AccessibilityController.m */; };
+		993EBB0F144B66F100A8864D /* M3AccessibleUIElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 993EBB0B144B66F100A8864D /* M3AccessibleUIElement.h */; };
+		993EBB10144B66F100A8864D /* M3AccessibleUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 993EBB0C144B66F100A8864D /* M3AccessibleUIElement.m */; };
 		99C4B925144AEF5C00FC8A13 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C4B924144AEF5C00FC8A13 /* Cocoa.framework */; };
 		99C4B92F144AEF5C00FC8A13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99C4B92D144AEF5C00FC8A13 /* InfoPlist.strings */; };
 		99C4B93B144AEF5C00FC8A13 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C4B93A144AEF5C00FC8A13 /* SenTestingKit.framework */; };
@@ -84,6 +88,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		993EBB09144B66F100A8864D /* M3AccessibilityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3AccessibilityController.h; sourceTree = "<group>"; };
+		993EBB0A144B66F100A8864D /* M3AccessibilityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3AccessibilityController.m; sourceTree = "<group>"; };
+		993EBB0B144B66F100A8864D /* M3AccessibleUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3AccessibleUIElement.h; sourceTree = "<group>"; };
+		993EBB0C144B66F100A8864D /* M3AccessibleUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3AccessibleUIElement.m; sourceTree = "<group>"; };
 		99C4B921144AEF5C00FC8A13 /* PossumTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PossumTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C4B924144AEF5C00FC8A13 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		99C4B927144AEF5C00FC8A13 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -180,6 +188,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		993EBB12144B66F700A8864D /* M3Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				993EBB09144B66F100A8864D /* M3AccessibilityController.h */,
+				993EBB0A144B66F100A8864D /* M3AccessibilityController.m */,
+				993EBB0B144B66F100A8864D /* M3AccessibleUIElement.h */,
+				993EBB0C144B66F100A8864D /* M3AccessibleUIElement.m */,
+			);
+			name = M3Accessibility;
+			sourceTree = "<group>";
+		};
 		99C4B915144AEF5C00FC8A13 = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +241,7 @@
 		99C4B92A144AEF5C00FC8A13 /* PossumTest */ = {
 			isa = PBXGroup;
 			children = (
+				993EBB12144B66F700A8864D /* M3Accessibility */,
 				99C4B931144AEF5C00FC8A13 /* PossumTest.h */,
 				99C4B963144B0CFF00FC8A13 /* POSTest.h */,
 				99C4B964144B0CFF00FC8A13 /* POSTest.m */,
@@ -366,6 +386,8 @@
 				99C4B9C5144B105000FC8A13 /* POSTabView.h in Headers */,
 				99C4B9CB144B2FA100FC8A13 /* POSObject.h in Headers */,
 				99C4B9CF144B344300FC8A13 /* POSPopUpButton.h in Headers */,
+				993EBB0D144B66F100A8864D /* M3AccessibilityController.h in Headers */,
+				993EBB0F144B66F100A8864D /* M3AccessibleUIElement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +526,8 @@
 				99C4B9C6144B105000FC8A13 /* POSTabView.m in Sources */,
 				99C4B9CC144B2FA100FC8A13 /* POSObject.m in Sources */,
 				99C4B9D0144B344300FC8A13 /* POSPopUpButton.m in Sources */,
+				993EBB0E144B66F100A8864D /* M3AccessibilityController.m in Sources */,
+				993EBB10144B66F100A8864D /* M3AccessibleUIElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +687,7 @@
 				99C4B94D144AEF5C00FC8A13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99C4B94E144AEF5C00FC8A13 /* Build configuration list for PBXNativeTarget "PossumTestTests" */ = {
 			isa = XCConfigurationList;
@@ -671,6 +696,7 @@
 				99C4B950144AEF5C00FC8A13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

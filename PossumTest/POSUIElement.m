@@ -10,11 +10,8 @@
 
 @implementation POSUIElement
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
+- (NSString *)identifier {
+	return nil;
 }
 
 @end
