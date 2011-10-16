@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSUIElement.h"
 
-@interface POSProgressIndicator : NSObject 
+typedef enum {
+	POSProgressIndicatorTypeNormal = 0,
+	POSProgressIndicatorTypeIndeterminate = 1
+} POSProgressIndicatorType;
+
+@interface POSProgressIndicator : POSUIElement 
+
+@property (readonly) POSProgressIndicatorType type;
+@property (readonly) NSInteger value;
+@property (readonly) NSInteger minValue;
+@property (readonly) NSInteger maxValue;
 
 @end

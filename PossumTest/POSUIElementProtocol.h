@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class POSWindow;
 @protocol POSUIElement <NSObject>
 
-@property (assign, getter=isFocused) BOOL focused;
+@property (readonly, getter=isFocused) BOOL focused;
 @property (readonly) NSPoint positionInWindow;
-@property (readonly) NSString *identifier;
+@property (readonly) POSWindow *window;
 
 @end

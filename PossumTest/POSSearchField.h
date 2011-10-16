@@ -8,6 +8,10 @@
 
 #import "POSTextField.h"
 
+@class POSButton;
 @interface POSSearchField : POSTextField 
+ 
+@property (readonly) POSButton *searchButton;
+@property (readonly) POSButton *clearButton;
 
 @end

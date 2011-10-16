@@ -8,6 +8,16 @@
 
 #import "POSControl.h"
 
+typedef enum {
+	POSSortDirectionAscending = 0,
+	POSSortDirectionDescending = 1,
+	POSSortDirectionUnknown = 2
+} POSSortDirection;
+
 @interface POSTableViewColumnHeader : POSControl 
+
+@property (readonly) NSString *title;
+@property (readonly) POSSortDirection sortDirection;
+- (void)press;
 
 @end

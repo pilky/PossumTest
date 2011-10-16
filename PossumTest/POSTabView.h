@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSUIElement.h"
 
-@interface POSTabView : NSObject 
+@interface POSTabView : POSUIElement 
+
+- (NSString *)nameOfTabAtIndex:(NSInteger)aIndex;
+- (NSUInteger)numberOfTabs;
+- (void)selectTabAtIndex:(NSInteger)aIndex; //select tab and then press
 
 @end

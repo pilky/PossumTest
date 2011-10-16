@@ -54,3 +54,19 @@ Launch app
 #import "POSProgressIndicator.h"
 #import "POSTextArea.h"
 #import "POSTabView.h"
+
+
+/*
+Not yet supported
+
+ NSDatePicker
+ NSScrollView
+ Relevancy Indidcator
+ Colour Well
+ Image View
+ Path control
+ Stepper
+ Split View
+ Rule Editor
+
+*/

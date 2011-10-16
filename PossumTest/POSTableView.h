@@ -10,4 +10,12 @@
 
 @interface POSTableView : POSControl 
 
+@property (assign, getter=isFocused) BOOL focused;
+
+@property (readonly) NSArray *columnHeaders;
+@property (readonly) NSArray *selectedRows;
+- (void)selectRowsAtIndexes:(NSIndexSet *)aIndexSet;
+@property (readonly) NSArray *rows;
+@property (readonly) NSArray *columns;
+
 @end

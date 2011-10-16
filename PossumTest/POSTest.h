@@ -10,4 +10,15 @@
 
 @interface POSTest : NSObject 
 
++ (BOOL)waitUntilTrue:(BOOL (^)(void))aTest timeout:(NSUInteger)aSeconds;
+
++ (void)assertTrue:(BOOL)aTest failureMessage:(NSString *)aMessage, ...;
++ (void)assertObject:(id)aObj isEqualToObject:(id)aObj2 failureMessage:(NSString *)aMessage, ...;
+
++ (void)takeScreenshot;
++ (void)takeScreenshotWithName:(NSString *)aName;
+
++ (void)logMessage:(NSString *)aMessage, ...;
+
+
 @end

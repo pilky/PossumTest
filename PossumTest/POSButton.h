@@ -8,6 +8,23 @@
 
 #import "POSControl.h"
 
+typedef enum {
+	POSButtonTypeNormal = 0,
+	POSButtonTypeDisclosure = 1,
+	POSButtonTypeCheckBox = 2,
+	POSButtonTypeRadio = 3
+} POSButtonType;
+
+
 @interface POSButton : POSControl 
+
+//children is nil
+
+@property (assign, getter=isFocused) BOOL focused;
+
+@property (readonly) NSString *title;
+@property (readonly) POSButtonType type;
+@property (readonly) NSInteger value;
+- (void)press;
 
 @end

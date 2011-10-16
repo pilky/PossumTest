@@ -16,6 +16,8 @@
 
 - (void)relaunch;
 
+
+@property (readonly) NSArray *windows;
 - (POSWindow *)windowWithIdentifier:(NSString *)aIdentifier;
 
 @property (readonly) NSString *title;

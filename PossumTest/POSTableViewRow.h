@@ -10,4 +10,9 @@
 
 @interface POSTableViewRow : NSObject 
 
+@property (readonly) NSInteger rowIndex;
+@property (assign, getter=isSelected) BOOL selected;
+- (id)cellAtIndex:(NSUInteger)aIndex;
+- (id)cellForColumnWithIdentifier:(NSString *)aIdentifier;
+
 @end

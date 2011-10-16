@@ -6,8 +6,14 @@
 //  Copyright 2011 M Cubed Software. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "POSObject.h"
+#import "POSUIElementProtocol.h"
 
-@interface POSToolbar : NSObject 
+@class POSButton;
+@interface POSToolbar : POSObject <POSUIElement> 
+
+- (POSButton *)buttonWithTitle:(NSString *)aTitle;
+- (id)groupWithTitle:(NSString *)aTitle;
+- (id)itemAtIndex:(NSUInteger)aIndex;
 
 @end

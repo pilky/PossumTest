@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSUIElement.h"
 
-@interface POSTextArea : NSObject 
+@interface POSTextArea : POSUIElement 
+
+@property (assign, getter=isFocused) BOOL focused;
+
+@property (retain) NSString *text;
+@property (retain) NSString *selectedText;
+@property (retain) NSArray *selectedTextRanges;
+@property (assign) NSRange selectedTextRange;
+- (void)showMenu;
 
 @end

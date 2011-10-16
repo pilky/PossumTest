@@ -1,5 +1,5 @@
 //
-//  POSMenuBar.h
+//  POSObject.h
 //  PossumTest
 //
 //  Created by Martin Pilkington on 16/10/2011.
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class POSApplication;
-@interface POSMenuBar : NSObject
+@interface POSObject : NSObject 
 
 @property (readonly) NSArray *children;
-@property (readonly) POSApplication *application;
-@property (readonly, getter = isEnabled) BOOL enabled;
+@property (readonly) NSSize size;
+@property (readonly) NSPoint positionOnScreen;
+@property (readonly) POSObject *parent;
 
 @end

@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class POSObject;
 @interface POSMenuItem : NSObject 
+
+@property (readonly) POSObject *parent;
+@property (readonly, getter = isEnabled) BOOL enabled;
+@property (assign, getter = isSelected) BOOL selected;
+@property (readonly) NSString *title;
+@property (readonly) char keyEquivalent;
+@property (readonly) NSUInteger keyEquivalentModifierMask;
+
+- (void)press;
+- (void)cancel;
 
 @end

@@ -10,4 +10,9 @@
 
 @interface POSOutlineViewRow : POSTableViewRow 
 
+@property (assign, getter=isDisclosed) BOOL disclosed;
+@property (readonly) NSArray *disclosedRows;
+@property (readonly) NSUInteger disclosureLevel;
+@property (readonly) POSOutlineViewRow *parentRow;
+
 @end

@@ -10,4 +10,9 @@
 
 @interface POSRadioGroup : POSControl 
 
+@property (assign, getter=isFocused) BOOL focused;
+
+@property (readonly) NSInteger selectedButtonIndex;
+- (void)selectButtonAtIndex:(NSInteger)aIndex;
+
 @end

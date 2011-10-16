@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSUIElementProtocol.h"
+#import "POSObject.h"
 
-@interface POSUIElement : NSObject 
+@interface POSUIElement : POSObject <POSUIElement>
+
+@property (readonly) NSString *identifier;
 
 @end

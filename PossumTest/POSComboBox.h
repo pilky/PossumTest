@@ -6,8 +6,11 @@
 //  Copyright 2011 M Cubed Software. All rights reserved.
 //
 
-#import "POSControl.h"
+#import "POSTextField.h"
 
-@interface POSComboBox : POSControl 
+@interface POSComboBox : POSTextField 
+
+@property (assign, getter=isExpanded) BOOL expanded;
+@property (readonly) NSArray *expandedValues;
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSUIElement.h"
 
-@interface POSControl : NSObject 
+@interface POSControl : POSUIElement 
+
+@property (readonly, getter=isEnabled) BOOL enabled;
 
 @end

@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface POSMenuBarItem : NSObject 
+@class POSMenuBar;
+@interface POSMenuBarItem : NSObject
+
+@property (readonly) NSString *title;
+@property (readonly) POSMenuBar *menuBar;
+@property (assign, getter=isSelected) BOOL selected;
+@property (readonly, getter=isEnabled) BOOL enabled;
+
+- (void)press;
+- (void)cancel;
 
 @end

@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface POSMenu : NSObject 
+@class POSObject;
+@interface POSMenu : NSObject
+
+@property (readonly, getter = isEnabled) BOOL enabled;
+@property (readonly) NSArray *children;
+@property (readonly) POSObject *parent;
+
+- (void)press;
+- (void)cancel;
+
 
 @end

@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class POSTableViewColumnHeader;
 @interface POSTableViewColumn : NSObject 
+
+@property (readonly) POSTableViewColumnHeader *header;
+- (id)cellAtRowIndex:(NSUInteger)aIndex;
+- (void)setWidth:(CGFloat)aWidth;
+@property (readonly) NSInteger columnIndex;
 
 @end
