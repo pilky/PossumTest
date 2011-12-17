@@ -17,4 +17,65 @@
 	return self;
 }
 
+
+- (BOOL)isFocused {
+	return NO;
+
+}
+
+
+- (void)setFocused:(BOOL)aFocused {
+
+}
+
+
+- (NSString *)text {
+	return nil;
+
+}
+
+
+- (void)setText:(NSString *)aText {
+
+}
+
+
+- (NSString *)selectedText {
+	return nil;
+
+}
+
+
+- (void)setSelectedText:(NSString *)aSelectedText {
+
+}
+
+
+- (NSArray *)selectedTextRanges {
+	return nil;
+
+}
+
+
+- (void)setSelectedTextRanges:(NSArray *)aSelectedTextRanges {
+
+}
+
+
+- (NSRange)selectedTextRange {
+	NSRange result;
+	return result;
+
+}
+
+
+- (void)setSelectedTextRange:(NSRange)aSelectedTextRange {
+
+}
+
+
+- (void)showMenu {
+
+}
+
 @end

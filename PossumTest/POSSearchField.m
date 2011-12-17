@@ -17,4 +17,17 @@
 	return self;
 }
 
+
+- (POSButton *)searchButton {
+	return nil;
+
+}
+
+
+- (POSButton *)clearButton {
+	return nil;
+
+}
+
+
 @end

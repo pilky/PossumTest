@@ -17,4 +17,27 @@
 	return self;
 }
 
+
+- (POSTableViewColumnHeader *)header {
+	return nil;
+
+}
+
+
+- (id)cellAtRowIndex:(NSUInteger)aIndex {
+	return nil;
+
+}
+
+
+- (void)setWidth:(CGFloat)aWidth {
+
+}
+
+
+- (NSInteger)columnIndex {
+	return 0;
+
+}
+
 @end

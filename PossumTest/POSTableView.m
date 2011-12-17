@@ -17,4 +17,45 @@
 	return self;
 }
 
+
+- (BOOL)isFocused {
+	return NO;
+
+}
+
+
+- (void)setFocused:(BOOL)aFocused {
+
+}
+
+
+- (NSArray *)columnHeaders {
+	return nil;
+
+}
+
+
+- (NSArray *)selectedRows {
+	return nil;
+
+}
+
+
+- (void)selectRowsAtIndexes:(NSIndexSet *)aIndexSet {
+
+}
+
+
+- (NSArray *)rows {
+	return nil;
+
+}
+
+
+- (NSArray *)columns {
+	return nil;
+
+}
+
+
 @end

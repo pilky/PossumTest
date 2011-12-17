@@ -17,4 +17,10 @@
 	return self;
 }
 
+
+- (BOOL)isEnabled {
+	return NO;
+
+}
+
 @end

@@ -10,11 +10,28 @@
 
 @implementation POSTest
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
++ (BOOL)waitUntilTrue:(BOOL (^)(void))aTest timeout:(NSUInteger)aSeconds {
+	return NO;
+}
+
++ (void)assertTrue:(BOOL)aTest failureMessage:(NSString *)aMessage, ... {
+	
+}
+
++ (void)assertObject:(id)aObj isEqualToObject:(id)aObj2 failureMessage:(NSString *)aMessage, ... {
+	
+}
+
++ (void)takeScreenshot {
+	
+}
+
++ (void)takeScreenshotWithName:(NSString *)aName {
+	
+}
+
++ (void)logMessage:(NSString *)aMessage, ... {
+	
 }
 
 @end

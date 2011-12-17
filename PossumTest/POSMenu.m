@@ -17,4 +17,32 @@
 	return self;
 }
 
+
+- (BOOL)isEnabled {
+	return NO;
+
+}
+
+
+- (NSArray *)children {
+	return nil;
+
+}
+
+
+- (POSObject *)parent {
+	return nil;
+
+}
+
+
+- (void)press {
+
+}
+
+
+- (void)cancel {
+
+}
+
 @end

@@ -17,4 +17,26 @@
 	return self;
 }
 
+
+- (BOOL)isFocused {
+	return NO;
+
+}
+
+
+- (void)setFocused:(BOOL)aFocused {
+
+}
+
+
+- (NSInteger)selectedButtonIndex {
+	return 0;
+
+}
+
+
+- (void)selectButtonAtIndex:(NSInteger)aIndex {
+
+}
+
 @end

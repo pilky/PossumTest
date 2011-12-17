@@ -31,36 +31,12 @@
 
 #import "M3AccessibilityController.h"
 #import "M3AccessibleUIElement.h"
-#import "M3DFA.h"
-
 
 NSString *M3AccessibilityErrorDomain = @"com.mcubedsw.M3Foundation.accessibility";
 
-static M3AccessibilityController *defaultController;
-
-
 @implementation M3AccessibilityController
 
-/**
- Return the default accessibility controller
- */
-+ (M3AccessibilityController *)defaultController {
-	if (!defaultController) {
-		defaultController = [[M3AccessibilityController alloc] init];
-	}
-	return defaultController;
-}
-
-- (id)init {
-	if ((self = [super init])) {
-	}
-	return self;
-}
-
-- (void)dealloc {
-	[systemWideElement release];
-	[super dealloc];
-}
+@synthesize systemWideElement;
 
 /**
  Returns YES if support for assistive devices is enabled in system prefs
@@ -72,11 +48,11 @@ static M3AccessibilityController *defaultController;
 
 - (M3AccessibleUIElement *)elementForActiveApplication {
 	pid_t processid = (pid_t)[[[[NSWorkspace sharedWorkspace] activeApplication] objectForKey:@"NSApplicationProcessIdentifier"] integerValue];
-	return [[[M3AccessibleUIElement alloc] initWithElement:AXUIElementCreateApplication(processid)] autorelease];
+	return [[M3AccessibleUIElement alloc] initWithElement:AXUIElementCreateApplication(processid) accessibilityController:self];
 }
 
 - (M3AccessibleUIElement *)elementForApplicationWithPid:(pid_t)processid {
-	return [[[M3AccessibleUIElement alloc] initWithElement:AXUIElementCreateApplication(processid)] autorelease];
+	return [[M3AccessibleUIElement alloc] initWithElement:AXUIElementCreateApplication(processid) accessibilityController:self];
 }
 
 /**
@@ -84,9 +60,9 @@ static M3AccessibilityController *defaultController;
  */
 - (M3AccessibleUIElement *)systemWideElement {
 	if (!systemWideElement) {
-		systemWideElement = [[M3AccessibleUIElement alloc] initWithElement:AXUIElementCreateSystemWide()];
+		systemWideElement = [[M3AccessibleUIElement alloc] initWithElement:AXUIElementCreateSystemWide() accessibilityController:self];
 	}
-	return [[systemWideElement retain] autorelease];
+	return systemWideElement;
 }
 
 
@@ -95,9 +71,9 @@ static M3AccessibilityController *defaultController;
 	AXError errorCode = AXUIElementCopyElementAtPosition([[self systemWideElement] element], point.x, point.y, &element);
 	
 	if (error != NULL && errorCode != 0) {
-		*error = [M3AccessibilityController errorForCode:errorCode];
+		*error = [self errorForCode:errorCode];
 	}
-	return [[[M3AccessibleUIElement alloc] initWithElement:element] autorelease];
+	return [[M3AccessibleUIElement alloc] initWithElement:element accessibilityController:self];
 }
 
 
@@ -106,7 +82,7 @@ static M3AccessibilityController *defaultController;
 /**
  Generate an NSError for the supplied code
  */
-+ (NSError *)errorForCode:(NSInteger)code {
+- (NSError *)errorForCode:(NSInteger)code {
 	NSString *localisedDescription = @"";
 	if (code == kAXErrorFailure) {
 		localisedDescription = NSLocalizedString(@"A system error occured.", @"");

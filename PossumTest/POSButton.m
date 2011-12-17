@@ -17,4 +17,39 @@
 	return self;
 }
 
+
+- (BOOL)isFocused {
+	return NO;
+
+}
+
+
+- (void)setFocused:(BOOL)aFocused {
+
+}
+
+
+- (NSString *)title {
+	return nil;
+
+}
+
+
+- (POSButtonType)type {
+	POSButtonType result;
+	return result;
+
+}
+
+
+- (NSInteger)value {
+	return 0;
+
+}
+
+
+- (void)press {
+
+}
+
 @end

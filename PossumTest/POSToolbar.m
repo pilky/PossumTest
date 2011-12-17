@@ -17,4 +17,42 @@
 	return self;
 }
 
+
+- (POSButton *)buttonWithTitle:(NSString *)aTitle {
+	return nil;
+
+}
+
+
+- (id)groupWithTitle:(NSString *)aTitle {
+	return nil;
+
+}
+
+
+- (id)itemAtIndex:(NSUInteger)aIndex {
+	return nil;
+
+}
+
+
+- (BOOL)isFocused {
+	return NO;
+
+}
+
+
+- (NSPoint)positionInWindow {
+	NSPoint result;
+	return result;
+
+}
+
+
+- (POSWindow *)window {
+	return nil;
+
+}
+
+
 @end

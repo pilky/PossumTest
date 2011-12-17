@@ -41,25 +41,14 @@ extern NSString *M3AccessibilityErrorDomain;
  A central controller for the accessibility APIs
  @since Available in M3Foundation 1.0 and later
  */
-@interface M3AccessibilityController : NSObject {
-	M3AccessibleUIElement *systemWideElement;
-}
-
-
-
-/**
- Returns the default controller instance, creating it if necessary.
- @result Returns the default controller instance
- @since Available in M3Foundation 1.0 and later
- */
-+ (M3AccessibilityController *)defaultController;
+@interface M3AccessibilityController : NSObject
 
 /**
  Checks if the accessibility APIs are enabled.
  @result Returns YES if accessibility is enabled, otherwise NO
  @since Available in M3Foundation 1.0 and later
  */
-- (BOOL)isAccessibilityEnabled;
+@property (readonly, getter = isAccessibilityEnabled) BOOL accessibilityEnabled;
 
 /**
  Returns an accessibility element representing the current frontmost application.
@@ -75,7 +64,7 @@ extern NSString *M3AccessibilityErrorDomain;
  @result Returns the system wide element
  @since Available in M3Foundation 1.0 and later
  */
-- (M3AccessibleUIElement *)systemWideElement;
+@property (readonly, strong) M3AccessibleUIElement *systemWideElement;
 
 /**
  Finds the element at the supplied point.
@@ -93,5 +82,5 @@ extern NSString *M3AccessibilityErrorDomain;
  @result The NSError object for the supplied code
  @since Available in M3Foundation 1.0 and later
  */
-+ (NSError *)errorForCode:(NSInteger)code;
+- (NSError *)errorForCode:(NSInteger)code;
 @end

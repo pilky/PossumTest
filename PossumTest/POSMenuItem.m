@@ -17,4 +17,55 @@
 	return self;
 }
 
+
+- (POSObject *)parent {
+	return nil;
+
+}
+
+
+- (BOOL)isEnabled {
+	return NO;
+
+}
+
+
+- (BOOL)isSelected {
+	return NO;
+
+}
+
+
+- (void)setSelected:(BOOL)aSelected {
+
+}
+
+
+- (NSString *)title {
+	return nil;
+
+}
+
+
+- (char)keyEquivalent {
+	return 0;
+
+}
+
+
+- (NSUInteger)keyEquivalentModifierMask {
+	return 0;
+
+}
+
+
+- (void)press {
+
+}
+
+
+- (void)cancel {
+
+}
+
 @end

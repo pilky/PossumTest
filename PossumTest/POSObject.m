@@ -10,16 +10,25 @@
 
 @implementation POSObject
 
+@synthesize accessibleUIElement;
+
+- (id)initWithAccessibleUIElement:(M3AccessibleUIElement *)aElement {
+	if ((self = [super init])) {
+		accessibleUIElement = aElement;
+	}
+	return self;
+}
+
 - (NSArray *)children {
 	return nil;
 }
 
 - (NSSize)size {
-	return nil;
+	return NSZeroSize;
 }
 
 - (NSPoint)positionOnScreen {
-	return nil;
+	return NSZeroPoint;
 }
 
 - (POSObject *)parent {

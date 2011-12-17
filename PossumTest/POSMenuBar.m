@@ -17,4 +17,22 @@
 	return self;
 }
 
+
+- (NSArray *)children {
+	return nil;
+
+}
+
+
+- (POSApplication *)application {
+	return nil;
+
+}
+
+
+- (BOOL)isEnabled {
+	return NO;
+
+}
+
 @end

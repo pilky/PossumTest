@@ -33,7 +33,7 @@
 }
 
 - (BOOL)isFrontmost {
-	return nil;
+	return NO;
 }
 
 - (void)setFrontmost:(BOOL)frontmost {
@@ -41,7 +41,7 @@
 }
 
 - (BOOL)isHidden {
-	return nil;
+	return NO;
 }
 
 - (void)setHidden:(BOOL)hidden {

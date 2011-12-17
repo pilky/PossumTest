@@ -14,4 +14,16 @@
 	return nil;
 }
 
+- (BOOL)isFocused {
+	return NO;
+}
+
+- (NSPoint)positionInWindow {
+	return NSZeroPoint;
+}
+
+- (POSWindow *)window {
+	return nil;
+}
+
 @end

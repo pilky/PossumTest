@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class M3AccessibleUIElement;
+
 @interface POSObject : NSObject 
+
+- (id)initWithAccessibleUIElement:(M3AccessibleUIElement *)aElement;
+
+@property (readonly, strong) M3AccessibleUIElement *accessibleUIElement;
 
 @property (readonly) NSArray *children;
 @property (readonly) NSSize size;

@@ -17,4 +17,21 @@
 	return self;
 }
 
+
+- (BOOL)isExpanded {
+	return NO;
+
+}
+
+
+- (void)setExpanded:(BOOL)anExpanded {
+
+}
+
+
+- (NSArray *)expandedValues {
+	return nil;
+
+}
+
 @end

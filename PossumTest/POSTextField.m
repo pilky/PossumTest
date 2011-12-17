@@ -17,4 +17,67 @@
 	return self;
 }
 
+
+- (BOOL)isFocused {
+	return NO;
+
+}
+
+
+- (void)setFocused:(BOOL)aFocused {
+
+}
+
+
+- (POSTextFieldType)type {
+	POSTextFieldType result;
+	return result;
+
+}
+
+
+- (NSString *)text {
+	return nil;
+
+}
+
+
+- (void)setText:(NSString *)aText {
+
+}
+
+
+- (NSString *)selectedText {
+	return nil;
+
+}
+
+
+- (void)setSelectedText:(NSString *)aSelectedText {
+
+}
+
+
+- (NSRange)selectedTextRange {
+	NSRange result;
+	return result;
+
+}
+
+
+- (void)setSelectedTextRange:(NSRange)aSelectedTextRange {
+
+}
+
+
+- (void)showMenu {
+
+}
+
+
+- (void)confirmEditing {
+
+}
+
+
 @end

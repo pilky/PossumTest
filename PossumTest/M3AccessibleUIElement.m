@@ -39,17 +39,18 @@
 @end
 
 
-@implementation M3AccessibleUIElement
+@implementation M3AccessibleUIElement 
 
-@synthesize element;
+@synthesize element, accessibilityController;
 
 - (id)copyWithZone:(NSZone *)zone {
     return self;
 }
 
-- (id)initWithElement:(AXUIElementRef)newElement {
+- (id)initWithElement:(AXUIElementRef)newElement accessibilityController:(M3AccessibilityController *)aController {
 	if ((self = [super init])) {
 		element = CFRetain(newElement);
+		accessibilityController = aController;
 	}
 	return self;
 }
@@ -69,7 +70,7 @@
 - (NSString *)descriptionForAction:(NSString *)action error:(NSError **)error {
 	CFStringRef description = nil;
 	AXError errorCode = AXUIElementCopyActionDescription (element, (__bridge_retained CFStringRef)action, &description);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError)
 		*error = returnError;
 	return returnError != nil ? (__bridge_transfer NSString *)description : nil;
@@ -81,7 +82,7 @@
 - (NSArray *)actionNamesAndError:(NSError **)error {
 	CFArrayRef names = nil;
 	AXError errorCode = AXUIElementCopyActionNames(element, &names);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError)
 		*error = returnError;
 	return (__bridge_transfer NSArray *)names;
@@ -93,7 +94,7 @@
 - (NSArray *)attributeNamesAndError:(NSError **)error {
 	CFArrayRef names = nil;
 	AXError errorCode = AXUIElementCopyAttributeNames(element, &names);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError)
 		*error = returnError;
 	return (__bridge_transfer NSArray *)names;
@@ -106,7 +107,7 @@
 	CFTypeRef value = nil;
 	if ([[self attributeNamesAndError:NULL] containsObject:attribute]) {
 		AXError errorCode = AXUIElementCopyAttributeValue(element, (__bridge_retained CFStringRef)attribute, &value);
-		NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+		NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 		if (error != NULL && returnError)
 			*error = returnError;
 	}
@@ -117,7 +118,7 @@
 - (id)valuesForAttribute:(NSString *)attribute inRange:(NSRange)range error:(NSError **)error {
 	CFArrayRef values = nil;
 	AXError errorCode = AXUIElementCopyAttributeValues(element, (__bridge_retained CFStringRef)attribute, range.location, range.length, &values);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError)
 		*error = returnError;
 	return [self sanitiseValue:(__bridge_transfer id)values];
@@ -129,7 +130,7 @@
 - (BOOL)isAttributeSettable:(NSString *)attribute error:(NSError **)error {
 	Boolean settable;
 	AXError errorCode = AXUIElementIsAttributeSettable(element, (__bridge_retained CFStringRef)attribute, &settable);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError)
 		*error = returnError;
 	return (BOOL)settable;
@@ -140,7 +141,7 @@
  */
 - (BOOL)performAction:(NSString *)action error:(NSError **)error {
 	AXError errorCode = AXUIElementPerformAction(element, (__bridge_retained CFStringRef)action);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError) {
 		*error = returnError;
 		return NO;
@@ -153,7 +154,7 @@
  */
 - (BOOL)postKeyboardEventWithKeyCharacter:(CGCharCode)keyChar virtualKey:(CGKeyCode)virtualKey keyDown:(BOOL)keyDown error:(NSError **)error {
 	AXError errorCode = AXUIElementPostKeyboardEvent(element, keyChar, virtualKey, (Boolean)keyDown);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError) {
 		*error = returnError;
 		return NO;
@@ -166,7 +167,7 @@
  */
 - (BOOL)setValue:(id)value forAttribute:(NSString *)attribute error:(NSError **)error {
 	AXError errorCode = AXUIElementSetAttributeValue(element, (__bridge_retained CFStringRef)attribute, (__bridge_retained CFTypeRef)value);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError) {
 		*error = returnError;
 		return NO;
@@ -219,7 +220,8 @@
 		}
 		return [array copy];
 	} else if ([[value description] rangeOfString:@"AXUIElement"].location != NSNotFound) {
-		return [[M3AccessibleUIElement alloc] initWithElement:(__bridge_retained AXUIElementRef)value];
+		return [[M3AccessibleUIElement alloc] initWithElement:(__bridge_retained AXUIElementRef)value 
+									  accessibilityController:self.accessibilityController];
 	}
 	return value;
 }
@@ -241,7 +243,7 @@
 - (pid_t)processIDAndError:(NSError **)error {
 	pid_t pid = 0;
 	AXError errorCode = AXUIElementGetPid(element, &pid);
-	NSError *returnError = [M3AccessibilityController errorForCode:(NSInteger)errorCode];
+	NSError *returnError = [self.accessibilityController errorForCode:(NSInteger)errorCode];
 	if (error != NULL && returnError)
 		*error = returnError;
 	

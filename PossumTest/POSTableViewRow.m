@@ -17,4 +17,33 @@
 	return self;
 }
 
+
+- (NSInteger)rowIndex {
+	return 0;
+
+}
+
+
+- (BOOL)isSelected {
+	return NO;
+
+}
+
+
+- (void)setSelected:(BOOL)aSelected {
+
+}
+
+
+- (id)cellAtIndex:(NSUInteger)aIndex {
+	return nil;
+
+}
+
+
+- (id)cellForColumnWithIdentifier:(NSString *)aIdentifier {
+	return nil;
+
+}
+
 @end

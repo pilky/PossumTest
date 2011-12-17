@@ -17,4 +17,43 @@
 	return self;
 }
 
+
+- (NSString *)title {
+	return nil;
+
+}
+
+
+- (POSMenuBar *)menuBar {
+	return nil;
+
+}
+
+
+- (BOOL)isSelected {
+	return NO;
+
+}
+
+
+- (void)setSelected:(BOOL)aSelected {
+
+}
+
+
+- (BOOL)isEnabled {
+	return NO;
+
+}
+
+
+- (void)press {
+
+}
+
+
+- (void)cancel {
+
+}
+
 @end

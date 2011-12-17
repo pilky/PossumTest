@@ -31,14 +31,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class M3AccessibilityController;
+
 /**
  @class M3AccessibleUIElement
  Represents an AXUIElementRef, providing a more Cocoa like interface to it.
  @since Available in M3Foundation 1.0 and later
  */
-@interface M3AccessibleUIElement : NSObject <NSCopying> {
-	AXUIElementRef element;
-}
+@interface M3AccessibleUIElement : NSObject <NSCopying> 
 
 /**
  @property element
@@ -47,6 +47,8 @@
  */
 @property (readonly) AXUIElementRef element;
 
+@property (readonly, weak) M3AccessibilityController *accessibilityController;
+
 /**
  Creates a new object with the supplied element
  @discussion The element is retained using CFRetain
@@ -54,7 +56,7 @@
  @result The initialised object
  @since Available in M3Foundation 1.0 and later
  */
-- (id)initWithElement:(AXUIElementRef)newElement;
+- (id)initWithElement:(AXUIElementRef)newElement accessibilityController:(M3AccessibilityController *)aController;
 
 /**
  Returns the description for the supplied action

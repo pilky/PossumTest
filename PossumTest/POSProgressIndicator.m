@@ -17,4 +17,30 @@
 	return self;
 }
 
+
+- (POSProgressIndicatorType)type {
+	POSProgressIndicatorType result;
+	return result;
+
+}
+
+
+- (NSInteger)value {
+	return 0;
+
+}
+
+
+- (NSInteger)minValue {
+	return 0;
+
+}
+
+
+- (NSInteger)maxValue {
+	return 0;
+
+}
+
+
 @end

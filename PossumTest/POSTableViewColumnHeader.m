@@ -17,4 +17,22 @@
 	return self;
 }
 
+
+- (NSString *)title {
+	return nil;
+
+}
+
+
+- (POSSortDirection)sortDirection {
+	POSSortDirection result;
+	return result;
+
+}
+
+
+- (void)press {
+
+}
+
 @end

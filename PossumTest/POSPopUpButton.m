@@ -17,4 +17,31 @@
 	return self;
 }
 
+
+- (NSString *)value {
+	return nil;
+
+}
+
+
+- (void)selectItemWithTitle:(NSString *)aTitle {
+
+}
+
+
+- (void)selectItemAtIndex:(NSInteger)aIndex {
+
+}
+
+
+- (void)press {
+
+}
+
+
+- (void)cancel {
+
+}
+
+
 @end

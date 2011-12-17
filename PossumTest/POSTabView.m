@@ -17,4 +17,21 @@
 	return self;
 }
 
+
+- (NSString *)nameOfTabAtIndex:(NSInteger)aIndex {
+	return nil;
+
+}
+
+
+- (NSUInteger)numberOfTabs {
+	return 0;
+
+}
+
+
+- (void)selectTabAtIndex:(NSInteger)aIndex {
+
+}
+
 @end

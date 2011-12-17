@@ -17,4 +17,45 @@
 	return self;
 }
 
+
+- (POSSliderType)type {
+	POSSliderType result;
+	return result;
+
+}
+
+
+- (NSInteger)value {
+	return 0;
+
+}
+
+
+- (void)setValue:(NSInteger)aValue {
+
+}
+
+
+- (NSInteger)minValue {
+	return 0;
+
+}
+
+
+- (NSInteger)maxValue {
+	return 0;
+
+}
+
+
+- (void)increment {
+
+}
+
+
+- (void)decrement {
+
+}
+
+
 @end

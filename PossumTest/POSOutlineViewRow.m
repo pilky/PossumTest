@@ -17,4 +17,34 @@
 	return self;
 }
 
+
+- (BOOL)isDisclosed {
+	return NO;
+
+}
+
+
+- (void)setDisclosed:(BOOL)aDisclosed {
+
+}
+
+
+- (NSArray *)disclosedRows {
+	return nil;
+
+}
+
+
+- (NSUInteger)disclosureLevel {
+	return 0;
+
+}
+
+
+- (POSOutlineViewRow *)parentRow {
+	return nil;
+
+}
+
+
 @end
