@@ -7,23 +7,30 @@
 //
 
 #import "POSUIElement.h"
+#import "POSWindow.h"
 
 @implementation POSUIElement
 
+//*****//
 - (NSString *)identifier {
-	return nil;
+	return [self valueForAttribute:NSAccessibilityIdentifierAttribute];
 }
 
+//*****//
 - (BOOL)isFocused {
-	return NO;
+	return [[self valueForAttribute:NSAccessibilityFocusedAttribute] boolValue];
 }
 
+//*****//
 - (NSPoint)positionInWindow {
-	return NSZeroPoint;
+	NSPoint windowPosition = self.window.positionOnScreen;
+	NSPoint position = self.positionOnScreen;
+	return NSMakePoint(position.x - windowPosition.x, position.y - windowPosition.y);
 }
 
+//*****//
 - (POSWindow *)window {
-	return nil;
+	return [self valueForAttribute:NSAccessibilityWindowAttribute];
 }
 
 @end

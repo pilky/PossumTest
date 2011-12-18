@@ -10,14 +10,6 @@
 
 @implementation POSWindow
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
-}
-
-
 - (NSString *)title {
 	return nil;
 
@@ -77,13 +69,6 @@
 
 
 - (void)setFullScreen:(BOOL)aFullScreen {
-
-}
-
-
-- (NSPoint)positionOnScreen {
-	NSPoint result;
-	return result;
 
 }
 

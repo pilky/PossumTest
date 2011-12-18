@@ -1,8 +1,8 @@
 //
-//  POSObjectTests.h
+//  POSUIElementTests.h
 //  PossumTest
 //
-//  Created by Martin Pilkington on 17/12/2011.
+//  Created by Martin Pilkington on 18/12/2011.
 //  Copyright (c) 2011 M Cubed Software. All rights reserved.
 //
 
@@ -10,7 +10,6 @@
 
 #import "POSTestRoot.h"
 
-@interface POSObjectTests : POSTestRoot
-
+@interface POSUIElementTests : POSTestRoot
 
 @end

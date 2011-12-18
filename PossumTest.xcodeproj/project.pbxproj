@@ -79,6 +79,8 @@
 		99FEDDE2149E1CE00051CF23 /* PossumTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99C4B921144AEF5C00FC8A13 /* PossumTest.framework */; };
 		99FEDDF2149E1D670051CF23 /* OCMock.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99FEDDDF149D30590051CF23 /* OCMock.framework */; };
 		99FEDDF3149E285A0051CF23 /* PossumTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 99C4B931144AEF5C00FC8A13 /* PossumTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99FEDDF6149E66CA0051CF23 /* POSUIElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDF5149E66CA0051CF23 /* POSUIElementTests.m */; };
+		99FEDDF9149E67470051CF23 /* POSTestRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDF8149E67470051CF23 /* POSTestRoot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +185,10 @@
 		99FEDDCD149D2E610051CF23 /* POSObjectTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSObjectTests.h; sourceTree = "<group>"; };
 		99FEDDCE149D2E610051CF23 /* POSObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSObjectTests.m; sourceTree = "<group>"; };
 		99FEDDDF149D30590051CF23 /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
+		99FEDDF4149E66CA0051CF23 /* POSUIElementTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSUIElementTests.h; sourceTree = "<group>"; };
+		99FEDDF5149E66CA0051CF23 /* POSUIElementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSUIElementTests.m; sourceTree = "<group>"; };
+		99FEDDF7149E67470051CF23 /* POSTestRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSTestRoot.h; sourceTree = "<group>"; };
+		99FEDDF8149E67470051CF23 /* POSTestRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSTestRoot.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,8 +303,12 @@
 			isa = PBXGroup;
 			children = (
 				99C4B941144AEF5C00FC8A13 /* Supporting Files */,
+				99FEDDF7149E67470051CF23 /* POSTestRoot.h */,
+				99FEDDF8149E67470051CF23 /* POSTestRoot.m */,
 				99FEDDCD149D2E610051CF23 /* POSObjectTests.h */,
 				99FEDDCE149D2E610051CF23 /* POSObjectTests.m */,
+				99FEDDF4149E66CA0051CF23 /* POSUIElementTests.h */,
+				99FEDDF5149E66CA0051CF23 /* POSUIElementTests.m */,
 			);
 			path = PossumTestTests;
 			sourceTree = "<group>";
@@ -559,6 +569,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FEDDCF149D2E610051CF23 /* POSObjectTests.m in Sources */,
+				99FEDDF6149E66CA0051CF23 /* POSUIElementTests.m in Sources */,
+				99FEDDF9149E67470051CF23 /* POSTestRoot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
