@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *POSAssertionFailureException;
+
+extern NSString *POSAssertionErrorKey;
+
 @interface POSTest : NSObject 
 
 + (BOOL)waitUntilTrue:(BOOL (^)(void))aTest timeout:(NSUInteger)aSeconds;
@@ -20,5 +24,6 @@
 
 + (void)logMessage:(NSString *)aMessage, ...;
 
++ (void)assertError:(NSError *)aError;
 
 @end

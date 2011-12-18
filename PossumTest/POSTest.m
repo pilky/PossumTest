@@ -8,6 +8,9 @@
 
 #import "POSTest.h"
 
+NSString *POSAssertionFailureException = @"POSAssertionFailureException";
+NSString *POSAssertionErrorKey = @"POSAssertionErrorKey";
+
 @implementation POSTest
 
 + (BOOL)waitUntilTrue:(BOOL (^)(void))aTest timeout:(NSUInteger)aSeconds {
@@ -20,6 +23,14 @@
 
 + (void)assertObject:(id)aObj isEqualToObject:(id)aObj2 failureMessage:(NSString *)aMessage, ... {
 	
+}
+
++ (void)assertError:(NSError *)aError {
+	if (aError) {
+		NSString *reason = [NSString stringWithFormat:@"Assertion failed with NSError '%@'", [aError localizedDescription]];
+		NSDictionary *userInfo = [NSDictionary dictionaryWithObject:aError forKey:POSAssertionErrorKey];
+		@throw [NSException exceptionWithName:POSAssertionFailureException reason:reason userInfo:userInfo];
+	}
 }
 
 + (void)takeScreenshot {

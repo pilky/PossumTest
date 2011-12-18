@@ -26,6 +26,7 @@ Launch app
  NSApplicationActivateIgnoringOtherApps
 */
 
+#import "POSObject.h"
 #import "POSTest.h"
 #import "POSApplication.h"
 #import "POSUIElementProtocol.h"

@@ -7,11 +7,14 @@
 //
 
 #import "POSObject.h"
+#import "M3AccessibleUIElement.h"
+#import "POSTest.h"
 
 @implementation POSObject
 
 @synthesize accessibleUIElement;
 
+//*****//
 - (id)initWithAccessibleUIElement:(M3AccessibleUIElement *)aElement {
 	if ((self = [super init])) {
 		accessibleUIElement = aElement;
@@ -19,20 +22,49 @@
 	return self;
 }
 
+
+
+
+
+#pragma mark -
+#pragma mark Properties
+
+//*****//
 - (NSArray *)children {
-	return nil;
+	return [self valueForAttribute:NSAccessibilityChildrenAttribute];
 }
 
+//*****//
 - (NSSize)size {
-	return NSZeroSize;
+	return [[self valueForAttribute:NSAccessibilitySizeAttribute] sizeValue];
 }
 
+//*****//
 - (NSPoint)positionOnScreen {
-	return NSZeroPoint;
+	return [[self valueForAttribute:NSAccessibilityPositionAttribute] pointValue];
 }
 
+//*****//
 - (POSObject *)parent {
-	return nil;
+	M3AccessibleUIElement *parentElement = [self valueForAttribute:NSAccessibilityParentAttribute];
+	return [[POSObject alloc] initWithAccessibleUIElement:parentElement];
+}
+
+
+
+
+
+#pragma mark -
+#pragma mark Helpers
+
+//*****//
+- (id)valueForAttribute:(NSString *)aAttribute {
+	NSError *error = nil;
+	id value = [self.accessibleUIElement valueForAttribute:aAttribute error:&error];
+	if (!value) {
+		[POSTest assertError:error];
+	}
+	return value;
 }
 
 @end
