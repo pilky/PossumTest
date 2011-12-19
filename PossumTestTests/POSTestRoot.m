@@ -11,11 +11,8 @@
 
 @implementation POSTestRoot
 
-@synthesize mockElement;
-
 - (void)setUp {
 	[super setUp];
-	mockElement = [OCMockObject mockForClass:[M3AccessibleUIElement class]];
 }
 
 @end

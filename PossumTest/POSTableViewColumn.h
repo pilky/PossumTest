@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSObject.h"
 
 @class POSTableViewColumnHeader;
-@interface POSTableViewColumn : NSObject 
+@interface POSTableViewColumn : POSObject 
 
 @property (readonly) POSTableViewColumnHeader *header;
 - (id)cellAtRowIndex:(NSUInteger)aIndex;

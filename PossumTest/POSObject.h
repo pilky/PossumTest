@@ -16,6 +16,8 @@
  **************************/
 @interface POSObject : NSObject 
 
++ (NSString *)classRole;
+
 /***************************
  Creates a new object with the supplied accessible element
  @param aElement The accessibility element representing the UI object
@@ -23,6 +25,7 @@
  @since PossumTest 1.0 or later
  **************************/
 - (id)initWithAccessibleUIElement:(M3AccessibleUIElement *)aElement;
+- (id)initWithAccessibleUIElement:(M3AccessibleUIElement *)aElement skipChecks:(BOOL)aSkipChecks;
 
 /***************************
  The accessibility element for the object
@@ -52,7 +55,7 @@
  The parent of the UI Object
  @since PossumTest 1.0 or later
  **************************/
-@property (readonly) POSObject *parent;
+@property (readonly) id parent;
 
 
 ///-----------------------------------------------------

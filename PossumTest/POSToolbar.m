@@ -7,51 +7,47 @@
 //
 
 #import "POSToolbar.h"
+#import "POSUIElementProtocol.h"
+#import "POSWindow.h"
 
 @implementation POSToolbar
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
++ (NSString *)classRole {
+	return NSAccessibilityToolbarRole;
 }
 
-
 - (POSButton *)buttonWithTitle:(NSString *)aTitle {
+	for (M3AccessibleUIElement *element in self.children) {
+		
+	}
 	return nil;
-
 }
 
 
 - (id)groupWithTitle:(NSString *)aTitle {
 	return nil;
-
 }
 
 
 - (id)itemAtIndex:(NSUInteger)aIndex {
 	return nil;
-
 }
 
-
+//*****//
 - (BOOL)isFocused {
-	return NO;
-
+	return [[self valueForAttribute:NSAccessibilityFocusedAttribute] boolValue];
 }
 
-
+//*****//
 - (NSPoint)positionInWindow {
-	NSPoint result;
-	return result;
-
+	NSPoint windowPosition = self.window.positionOnScreen;
+	NSPoint position = self.positionOnScreen;
+	return NSMakePoint(position.x - windowPosition.x, position.y - windowPosition.y);
 }
 
-
+//*****//
 - (POSWindow *)window {
-	return nil;
-
+	return [self valueForAttribute:NSAccessibilityWindowAttribute];
 }
 
 

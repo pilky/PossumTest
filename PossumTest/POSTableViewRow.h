@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSObject.h"
 
-@interface POSTableViewRow : NSObject 
+@interface POSTableViewRow : POSObject 
 
 @property (readonly) NSInteger rowIndex;
 @property (assign, getter=isSelected) BOOL selected;

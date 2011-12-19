@@ -10,11 +10,12 @@
 #import <PossumTest/PossumTest.h>
 #import <PossumTest/M3AccessibleUIElement.h>
 #import <OCMock/OCMock.h>
+#import "M3FakeAccessibleUIElement.h"
 
 @class POSObject;
 
 @interface POSTestRoot : SenTestCase 
 
-@property (readonly, strong) id mockElement;
+
 
 @end

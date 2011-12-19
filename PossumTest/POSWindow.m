@@ -10,6 +10,10 @@
 
 @implementation POSWindow
 
++ (NSString *)classRole {
+	return NSAccessibilityWindowRole;
+}
+
 - (NSString *)title {
 	return nil;
 

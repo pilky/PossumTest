@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSObject.h"
 
 @class POSMenuBar;
-@interface POSMenuBarItem : NSObject
+@interface POSMenuBarItem : POSObject
 
 @property (readonly) NSString *title;
 @property (readonly) POSMenuBar *menuBar;

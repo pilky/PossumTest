@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSObject.h"
 
 @class POSApplication;
-@interface POSMenuBar : NSObject
+@interface POSMenuBar : POSObject
 
-@property (readonly) NSArray *children;
 @property (readonly) POSApplication *application;
 @property (readonly, getter = isEnabled) BOOL enabled;
 

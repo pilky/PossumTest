@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "POSObject.h"
 
-@class POSObject;
-@interface POSMenuItem : NSObject 
+@interface POSMenuItem : POSObject 
 
-@property (readonly) POSObject *parent;
 @property (readonly, getter = isEnabled) BOOL enabled;
 @property (assign, getter = isSelected) BOOL selected;
 @property (readonly) NSString *title;

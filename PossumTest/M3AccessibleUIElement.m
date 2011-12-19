@@ -56,11 +56,11 @@
 }
 
 - (void)dealloc {
-	CFRelease(element);
+	if (element) CFRelease(element);
 }
 
 - (void)finalize {
-	CFRelease(element);
+	if (element) CFRelease(element);
 	[super finalize];
 }
 
