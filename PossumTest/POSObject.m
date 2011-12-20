@@ -111,7 +111,11 @@ static NSDictionary *classRoleMap = nil;
 
 //*****//
 - (NSArray *)children {
-	return [self valueForAttribute:NSAccessibilityChildrenAttribute];
+	NSMutableArray *children = [NSMutableArray array];
+	for (M3AccessibleUIElement *element in [self valueForAttribute:NSAccessibilityChildrenAttribute]) {
+		[children addObject:[[POSObject alloc] initWithAccessibleUIElement:element]];
+	}
+	return [children copy];
 }
 
 //*****//

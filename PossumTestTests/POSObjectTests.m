@@ -22,6 +22,9 @@
 
 
 
+#pragma mark -
+
+//*****//
 - (void)testInitWithAccessibleUIElement_testReturnsCorrectObjectIfRolesMatch {
 	id windowElement = [OCMockObject mockForClass:[M3AccessibleUIElement class]];
 	[[[windowElement stub] andReturn:NSAccessibilityWindowRole] valueForAttribute:NSAccessibilityRoleAttribute error:NULL];
@@ -30,6 +33,7 @@
 	STAssertTrue([window isMemberOfClass:[POSWindow class]], @"Window should be a window");
 }
 
+//*****//
 - (void)testInitWithAccessibleUIElement_testReturnsObjectOfCorrectClassIfRolesDontMatch {
 	M3FakeAccessibleUIElement *element = [[M3FakeAccessibleUIElement alloc] initWithRole:NSAccessibilityWindowRole subrole:nil];
 	STAssertTrue([[[POSObject alloc] initWithAccessibleUIElement:element] isKindOfClass:[POSWindow class]], @"AXWindow should give POSWindow");
@@ -103,6 +107,7 @@
 	STAssertTrue([[[POSObject alloc] initWithAccessibleUIElement:element] isKindOfClass:[POSOutlineViewRow class]], @"AXRow/AXOutlineRow should give POSOutlineViewRow");
 }
 
+//*****//
 - (void)testInitWithAccessibleUIElement_testReturnsPOSObjectForUnknownRole {
 	M3FakeAccessibleUIElement *unknownElement = [[M3FakeAccessibleUIElement alloc] initWithRole:@"AXFoo" subrole:nil];
 	
@@ -127,15 +132,33 @@
 	STAssertThrows([object valueForAttribute:@"bar"], @"");
 }
 
+
+
 #pragma mark -
 
-- (void)testChildren {
+//*****//
+- (void)testChildren_noChildrenReturnsEmptyArray {
 	[fakeElement setValue:[NSArray array] forAttribute:NSAccessibilityChildrenAttribute error:NULL];
 	STAssertEqualObjects(object.children, [NSArray array], @"Children didn't return an array");
 }
 
+//*****//
+- (void)testChildren_correctChildTypesAreReturned {
+	M3FakeAccessibleUIElement *window = [[M3FakeAccessibleUIElement alloc] initWithRole:NSAccessibilityWindowRole subrole:nil];
+	M3FakeAccessibleUIElement *button = [[M3FakeAccessibleUIElement alloc] initWithRole:NSAccessibilityButtonRole subrole:nil];
+	[fakeElement setValue:[NSArray arrayWithObjects:window, button, nil] forAttribute:NSAccessibilityChildrenAttribute error:NULL];
+	
+	NSArray *children = object.children;
+	STAssertEquals(children.count, (NSUInteger)2, @"There should be 2 children");
+	STAssertTrue([[children objectAtIndex:0] isKindOfClass:[POSWindow class]], @"The first child should be a window");
+	STAssertTrue([[children objectAtIndex:1] isKindOfClass:[POSButton class]], @"The second child should be a button");
+}
+
+
+
 #pragma mark -
 
+//*****//
 - (void)testSize {
 	NSValue *testSize = [NSValue valueWithSize:NSMakeSize(1, 2)];
 	
@@ -145,8 +168,11 @@
 	STAssertTrue(NSEqualSizes(size, testSize.sizeValue), @"Sizes aren't equal");
 }
 
+
+
 #pragma mark -
 
+//*****//
 - (void)testPositionOnScreen {
 	NSValue *testPoint = [NSValue valueWithPoint:NSMakePoint(1, 2)];
 	[fakeElement setValue:testPoint forAttribute:NSAccessibilityPositionAttribute error:NULL];
@@ -154,8 +180,11 @@
 	STAssertTrue(NSEqualPoints(point, testPoint.pointValue), @"Positions on screen aren't equal");
 }
 
+
+
 #pragma mark -
 
+//*****//
 - (void)testParent {
 	M3FakeAccessibleUIElement *parentElement = [[M3FakeAccessibleUIElement alloc] initWithRole:@"" subrole:nil];
 	[fakeElement setValue:parentElement forAttribute:NSAccessibilityParentAttribute error:NULL];

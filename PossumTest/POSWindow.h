@@ -22,7 +22,6 @@
 @property (assign, getter = isMainWindow) BOOL mainWindow;
 @property (assign, getter = isMinimised) BOOL minimised;
 @property (assign, getter = isFullScreen) BOOL fullScreen;
-@property (assign) NSPoint positionOnScreen;
 
 @property (readonly) POSButton *closeButton;
 @property (readonly) POSButton *minimiseButton;
