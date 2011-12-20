@@ -82,6 +82,7 @@
 		99FEDDF6149E66CA0051CF23 /* POSUIElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDF5149E66CA0051CF23 /* POSUIElementTests.m */; };
 		99FEDDF9149E67470051CF23 /* POSTestRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDF8149E67470051CF23 /* POSTestRoot.m */; };
 		99FEDDFC149FC83B0051CF23 /* M3FakeAccessibleUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDFB149FC83B0051CF23 /* M3FakeAccessibleUIElement.m */; };
+		99FEDDFF14A0C22B0051CF23 /* POSToolbarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDFE14A0C22B0051CF23 /* POSToolbarTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,8 @@
 		99FEDDF8149E67470051CF23 /* POSTestRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSTestRoot.m; sourceTree = "<group>"; };
 		99FEDDFA149FC83B0051CF23 /* M3FakeAccessibleUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3FakeAccessibleUIElement.h; sourceTree = "<group>"; };
 		99FEDDFB149FC83B0051CF23 /* M3FakeAccessibleUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3FakeAccessibleUIElement.m; sourceTree = "<group>"; };
+		99FEDDFD14A0C22B0051CF23 /* POSToolbarTests.h */ = {isa = PBXFileReference; fileEncoding = 4; path = POSToolbarTests.h; sourceTree = "<group>"; };
+		99FEDDFE14A0C22B0051CF23 /* POSToolbarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSToolbarTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +315,8 @@
 				99FEDDCE149D2E610051CF23 /* POSObjectTests.m */,
 				99FEDDF4149E66CA0051CF23 /* POSUIElementTests.h */,
 				99FEDDF5149E66CA0051CF23 /* POSUIElementTests.m */,
+				99FEDDFD14A0C22B0051CF23 /* POSToolbarTests.h */,
+				99FEDDFE14A0C22B0051CF23 /* POSToolbarTests.m */,
 			);
 			path = PossumTestTests;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				99FEDDF6149E66CA0051CF23 /* POSUIElementTests.m in Sources */,
 				99FEDDF9149E67470051CF23 /* POSTestRoot.m in Sources */,
 				99FEDDFC149FC83B0051CF23 /* M3FakeAccessibleUIElement.m in Sources */,
+				99FEDDFF14A0C22B0051CF23 /* POSToolbarTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

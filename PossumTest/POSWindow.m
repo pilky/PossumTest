@@ -202,18 +202,6 @@
 }
 
 
-- (NSArray *)imageViews {
-	return nil;
-
-}
-
-
-- (POSImageView *)imageViewWithIdentifier:(NSString *)aIdentifier {
-	return nil;
-
-}
-
-
 - (NSArray *)popupButtons {
 	return nil;
 

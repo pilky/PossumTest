@@ -11,7 +11,7 @@
 
 @class POSButton, POSCheckbox, POSRadioGroup, POSTextField, POSSearchField, POSDatePicker, POSComboBox;
 @class POSPopUpButton, POSTextArea, POSTableView, POSOutlineView, POSTabView, POSSlider, POSStepper;
-@class POSLevelIndicator, POSToolbar, POSProgressIndicator, POSImageView;
+@class POSLevelIndicator, POSToolbar, POSProgressIndicator;
 @interface POSWindow : POSObject 
 
 @property (readonly) NSString *title;
@@ -50,9 +50,6 @@
 
 @property (readonly) NSArray *comboBoxes;
 - (POSComboBox *)comboBoxWithIdentifier:(NSString *)aIdentifier;
-
-@property (readonly) NSArray *imageViews;
-- (POSImageView *)imageViewWithIdentifier:(NSString *)aIdentifier;
 
 @property (readonly) NSArray *popupButtons;
 - (POSPopUpButton *)popupWithIdentifier:(NSString *)aIdentifier;

@@ -10,10 +10,19 @@
 #import "POSUIElementProtocol.h"
 
 @class POSButton;
+
+/***************************
+ Represents a toolbar
+ @since PossumTest 1.0 or later
+ **************************/
 @interface POSToolbar : POSObject <POSUIElement> 
 
+/***************************
+ Find the toolbar button with the supplied title
+ @param aTitle The toolbar button title to search for
+ @return The matching button, if found. Otherwise returns nil
+ @since PossumTest 1.0 or later
+ **************************/
 - (POSButton *)buttonWithTitle:(NSString *)aTitle;
-- (id)groupWithTitle:(NSString *)aTitle;
-- (id)itemAtIndex:(NSUInteger)aIndex;
 
 @end

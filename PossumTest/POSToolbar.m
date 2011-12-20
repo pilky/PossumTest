@@ -17,19 +17,10 @@
 }
 
 - (POSButton *)buttonWithTitle:(NSString *)aTitle {
-	for (M3AccessibleUIElement *element in self.children) {
-		
-	}
-	return nil;
-}
-
-
-- (id)groupWithTitle:(NSString *)aTitle {
-	return nil;
-}
-
-
-- (id)itemAtIndex:(NSUInteger)aIndex {
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"class = 'POSButton' AND title = %@", aTitle];
+	NSArray *buttons = [self.children filteredArrayUsingPredicate:predicate];
+	if ([buttons count]) 
+		return [buttons objectAtIndex:0];
 	return nil;
 }
 
