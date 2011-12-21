@@ -10,29 +10,8 @@
 
 @implementation POSMenuBar
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
-}
-
-
-- (NSArray *)children {
-	return nil;
-
-}
-
-
-- (POSApplication *)application {
-	return nil;
-
-}
-
-
 - (BOOL)isEnabled {
-	return NO;
-
+	return [[self valueForAttribute:NSAccessibilityEnabledAttribute] boolValue];
 }
 
 @end

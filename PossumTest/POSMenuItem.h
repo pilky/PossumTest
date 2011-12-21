@@ -7,17 +7,36 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "POSObject.h"
+#import "POSMenuObject.h"
 
-@interface POSMenuItem : POSObject 
+/***************************
+ Represents a menu item
+ @since PossumTest 1.0 or later
+ **************************/
+@interface POSMenuItem : POSMenuObject 
 
-@property (readonly, getter = isEnabled) BOOL enabled;
+/***************************
+ The selected state of the menu bar item
+ @since PossumTest 1.0 or later
+ **************************/
 @property (assign, getter = isSelected) BOOL selected;
-@property (readonly) NSString *title;
-@property (readonly) char keyEquivalent;
-@property (readonly) NSUInteger keyEquivalentModifierMask;
 
-- (void)press;
-- (void)cancel;
+/***************************
+ The menu bar item's title
+ @since PossumTest 1.0 or later
+ **************************/
+@property (readonly) NSString *title;
+
+/***************************
+ Returns the key equivalent for the menu item
+ @since PossumTest 1.0 or later
+ **************************/
+@property (readonly) char keyEquivalent;
+
+/***************************
+ Returns the modifier mask for the menu item
+ @since PossumTest 1.0 or later
+ **************************/
+@property (readonly) NSUInteger keyEquivalentModifierMask;
 
 @end

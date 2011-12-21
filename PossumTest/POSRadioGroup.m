@@ -10,33 +10,21 @@
 
 @implementation POSRadioGroup
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
-}
-
-
-- (BOOL)isFocused {
-	return NO;
-
-}
-
-
 - (void)setFocused:(BOOL)aFocused {
-
+	[self setValue:[NSNumber numberWithBool:aFocused] forAttribute:NSAccessibilityFocusedAttribute];
 }
 
 
 - (NSInteger)selectedButtonIndex {
+	//Get children
+	//Find index with value YES
 	return 0;
-
 }
 
 
 - (void)selectButtonAtIndex:(NSInteger)aIndex {
-
+	//Get the child at the supplied index
+	//press it
 }
 
 @end

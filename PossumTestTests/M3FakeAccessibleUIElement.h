@@ -13,5 +13,6 @@
 
 - (id)initWithRole:(NSString *)aRole subrole:(NSString *)aSubrole;
 @property (strong) NSError *error;
+@property (readonly, strong) NSString *lastPerformedAction;
 
 @end

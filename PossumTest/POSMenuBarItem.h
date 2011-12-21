@@ -7,17 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "POSObject.h"
+#import "POSMenuObject.h"
 
 @class POSMenuBar;
-@interface POSMenuBarItem : POSObject
+/***************************
+ Represents a menu bar item
+ @since PossumTest 1.0 or later
+ **************************/
+@interface POSMenuBarItem : POSMenuObject
 
+/***************************
+ The menu bar item's title
+ @since PossumTest 1.0 or later
+ **************************/
 @property (readonly) NSString *title;
-@property (readonly) POSMenuBar *menuBar;
-@property (assign, getter=isSelected) BOOL selected;
-@property (readonly, getter=isEnabled) BOOL enabled;
 
-- (void)press;
-- (void)cancel;
+/***************************
+ The selected state of the menu bar item
+ @since PossumTest 1.0 or later
+ **************************/
+@property (assign, getter=isSelected) BOOL selected;
 
 @end

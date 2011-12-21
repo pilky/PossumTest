@@ -10,62 +10,29 @@
 
 @implementation POSMenuItem
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
-}
-
-
-- (POSObject *)parent {
-	return nil;
-
-}
-
-
-- (BOOL)isEnabled {
-	return NO;
-
-}
-
-
-- (BOOL)isSelected {
-	return NO;
-
-}
-
-
-- (void)setSelected:(BOOL)aSelected {
-
-}
-
-
+//*****//
 - (NSString *)title {
-	return nil;
-
+	return [self valueForAttribute:NSAccessibilityTitleAttribute];
 }
 
+//*****//
+- (BOOL)isSelected {
+	return [[self valueForAttribute:NSAccessibilitySelectedAttribute] boolValue];
+}
 
+//*****//
+- (void)setSelected:(BOOL)aSelected {
+	[self setValue:[NSNumber numberWithBool:aSelected] forAttribute:NSAccessibilitySelectedAttribute];
+}
+
+//*****//
 - (char)keyEquivalent {
-	return 0;
-
+	return (char)[[self valueForAttribute:@"AXMenuItemCmdChar"] integerValue];
 }
 
-
+//*****//
 - (NSUInteger)keyEquivalentModifierMask {
-	return 0;
-
-}
-
-
-- (void)press {
-
-}
-
-
-- (void)cancel {
-
+	return [[self valueForAttribute:@"AXMenuItemCmdModifiers"] integerValue];
 }
 
 @end

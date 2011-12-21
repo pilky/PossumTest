@@ -87,6 +87,10 @@ static NSDictionary *classRoleMap = nil;
 		if ([subrole isEqualToString:NSAccessibilitySortButtonSubrole])
 			return NSClassFromString(@"POSTableViewColumnHeader");
 	}
+	if ([role isEqualToString:NSAccessibilityCheckBoxRole] || [role isEqualToString:NSAccessibilityRadioButtonRole]
+		|| [role isEqualToString:NSAccessibilityDisclosureTriangleRole]) {
+		return NSClassFromString(@"POSButton");
+	}
 	if ([role isEqualToString:NSAccessibilityTextFieldRole]) {
 		if (!subrole)
 			return NSClassFromString(@"POSTextField");
@@ -149,6 +153,22 @@ static NSDictionary *classRoleMap = nil;
 		[POSTest assertError:error];
 	}
 	return value;
+}
+
+//*****//
+- (void)setValue:(id)aValue forAttribute:(NSString *)aAttribute {
+	NSError *error = nil;
+	if (![self.accessibleUIElement setValue:aValue forAttribute:aAttribute error:&error]) {
+		[POSTest assertError:error];
+	}
+}
+
+//*****//
+- (void)performAction:(NSString *)aAction {
+	NSError *error = nil;
+	if (![self.accessibleUIElement performAction:aAction error:&error]) {
+		[POSTest assertError:error];
+	}
 }
 
 @end

@@ -10,39 +10,4 @@
 
 @implementation POSMenu
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
-}
-
-
-- (BOOL)isEnabled {
-	return NO;
-
-}
-
-
-- (NSArray *)children {
-	return nil;
-
-}
-
-
-- (POSObject *)parent {
-	return nil;
-
-}
-
-
-- (void)press {
-
-}
-
-
-- (void)cancel {
-
-}
-
 @end

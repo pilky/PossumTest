@@ -72,4 +72,19 @@
  **************************/
 - (id)valueForAttribute:(NSString *)aAttribute;
 
+/***************************
+ Sets the value and attribute
+ @param aValue The value to set
+ @param aAttribute The attribute to set it on
+ @since PossumTest 1.0 or later
+ **************************/
+- (void)setValue:(id)aValue forAttribute:(NSString *)aAttribute;
+
+/***************************
+ Perform an action on the object
+ @param aAction The action to perform
+ @since PossumTest 1.0 or later
+ **************************/
+- (void)performAction:(NSString *)aAction;
+
 @end

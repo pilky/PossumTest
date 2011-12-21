@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "POSObject.h"
+#import "POSMenuObject.h"
 
-@interface POSMenu : POSObject
-
-@property (readonly, getter = isEnabled) BOOL enabled;
-
-- (void)press;
-- (void)cancel;
+/***************************
+ Represents a menu
+ @since PossumTest 1.0 or later
+ **************************/
+@interface POSMenu : POSMenuObject
 
 
 @end

@@ -12,7 +12,7 @@
 	NSMutableDictionary *attributes;
 }
 
-@synthesize error;
+@synthesize error, lastPerformedAction;
 
 - (id)initWithRole:(NSString *)aRole subrole:(NSString *)aSubrole {
 	if ((self = [super init])) {
@@ -43,6 +43,16 @@
 	} else {
 		[attributes removeObjectForKey:attribute];
 	}
+	return YES;
+}
+
+- (BOOL)performAction:(NSString *)aAction error:(NSError **)aError {
+	if (error && aError != NULL) {
+		*aError = error;
+		return NO;
+	}
+	
+	lastPerformedAction = aAction;
 	return YES;
 }
 

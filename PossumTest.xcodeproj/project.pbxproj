@@ -83,6 +83,12 @@
 		99FEDDF9149E67470051CF23 /* POSTestRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDF8149E67470051CF23 /* POSTestRoot.m */; };
 		99FEDDFC149FC83B0051CF23 /* M3FakeAccessibleUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDFB149FC83B0051CF23 /* M3FakeAccessibleUIElement.m */; };
 		99FEDDFF14A0C22B0051CF23 /* POSToolbarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDDFE14A0C22B0051CF23 /* POSToolbarTests.m */; };
+		99FEDE0314A0DBD30051CF23 /* POSMenuBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDE0214A0DBD30051CF23 /* POSMenuBarTests.m */; };
+		99FEDE0614A0E1C60051CF23 /* POSMenuBarItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDE0514A0E1C60051CF23 /* POSMenuBarItemTests.m */; };
+		99FEDE0C14A0E8630051CF23 /* POSMenuObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 99FEDE0A14A0E8620051CF23 /* POSMenuObject.h */; };
+		99FEDE0D14A0E8630051CF23 /* POSMenuObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDE0B14A0E8620051CF23 /* POSMenuObject.m */; };
+		99FEDE1014A0E90B0051CF23 /* POSMenuObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDE0F14A0E90B0051CF23 /* POSMenuObjectTests.m */; };
+		99FEDE1314A0EAD20051CF23 /* POSMenuItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FEDE1214A0EAD20051CF23 /* POSMenuItemTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,8 +199,18 @@
 		99FEDDF8149E67470051CF23 /* POSTestRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSTestRoot.m; sourceTree = "<group>"; };
 		99FEDDFA149FC83B0051CF23 /* M3FakeAccessibleUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3FakeAccessibleUIElement.h; sourceTree = "<group>"; };
 		99FEDDFB149FC83B0051CF23 /* M3FakeAccessibleUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3FakeAccessibleUIElement.m; sourceTree = "<group>"; };
-		99FEDDFD14A0C22B0051CF23 /* POSToolbarTests.h */ = {isa = PBXFileReference; fileEncoding = 4; path = POSToolbarTests.h; sourceTree = "<group>"; };
+		99FEDDFD14A0C22B0051CF23 /* POSToolbarTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSToolbarTests.h; sourceTree = "<group>"; };
 		99FEDDFE14A0C22B0051CF23 /* POSToolbarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSToolbarTests.m; sourceTree = "<group>"; };
+		99FEDE0114A0DBD30051CF23 /* POSMenuBarTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSMenuBarTests.h; sourceTree = "<group>"; };
+		99FEDE0214A0DBD30051CF23 /* POSMenuBarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSMenuBarTests.m; sourceTree = "<group>"; };
+		99FEDE0414A0E1C60051CF23 /* POSMenuBarItemTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSMenuBarItemTests.h; sourceTree = "<group>"; };
+		99FEDE0514A0E1C60051CF23 /* POSMenuBarItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSMenuBarItemTests.m; sourceTree = "<group>"; };
+		99FEDE0A14A0E8620051CF23 /* POSMenuObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSMenuObject.h; sourceTree = "<group>"; };
+		99FEDE0B14A0E8620051CF23 /* POSMenuObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSMenuObject.m; sourceTree = "<group>"; };
+		99FEDE0E14A0E90B0051CF23 /* POSMenuObjectTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSMenuObjectTests.h; sourceTree = "<group>"; };
+		99FEDE0F14A0E90B0051CF23 /* POSMenuObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSMenuObjectTests.m; sourceTree = "<group>"; };
+		99FEDE1114A0EAD20051CF23 /* POSMenuItemTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSMenuItemTests.h; sourceTree = "<group>"; };
+		99FEDE1214A0EAD20051CF23 /* POSMenuItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSMenuItemTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +333,7 @@
 				99FEDDF5149E66CA0051CF23 /* POSUIElementTests.m */,
 				99FEDDFD14A0C22B0051CF23 /* POSToolbarTests.h */,
 				99FEDDFE14A0C22B0051CF23 /* POSToolbarTests.m */,
+				99FEDE0014A0DBC00051CF23 /* Menu Tests */,
 			);
 			path = PossumTestTests;
 			sourceTree = "<group>";
@@ -381,6 +398,8 @@
 			children = (
 				99C4B967144B0D4E00FC8A13 /* POSMenuBar.h */,
 				99C4B968144B0D4E00FC8A13 /* POSMenuBar.m */,
+				99FEDE0A14A0E8620051CF23 /* POSMenuObject.h */,
+				99FEDE0B14A0E8620051CF23 /* POSMenuObject.m */,
 				99C4B96B144B0DCC00FC8A13 /* POSMenuBarItem.h */,
 				99C4B96C144B0DCC00FC8A13 /* POSMenuBarItem.m */,
 				99C4B96F144B0DD800FC8A13 /* POSMenu.h */,
@@ -389,6 +408,21 @@
 				99C4B974144B0DEF00FC8A13 /* POSMenuItem.m */,
 			);
 			name = Menus;
+			sourceTree = "<group>";
+		};
+		99FEDE0014A0DBC00051CF23 /* Menu Tests */ = {
+			isa = PBXGroup;
+			children = (
+				99FEDE0114A0DBD30051CF23 /* POSMenuBarTests.h */,
+				99FEDE0214A0DBD30051CF23 /* POSMenuBarTests.m */,
+				99FEDE0E14A0E90B0051CF23 /* POSMenuObjectTests.h */,
+				99FEDE0F14A0E90B0051CF23 /* POSMenuObjectTests.m */,
+				99FEDE0414A0E1C60051CF23 /* POSMenuBarItemTests.h */,
+				99FEDE0514A0E1C60051CF23 /* POSMenuBarItemTests.m */,
+				99FEDE1114A0EAD20051CF23 /* POSMenuItemTests.h */,
+				99FEDE1214A0EAD20051CF23 /* POSMenuItemTests.m */,
+			);
+			name = "Menu Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +464,7 @@
 				993EBB0D144B66F100A8864D /* M3AccessibilityController.h in Headers */,
 				993EBB0F144B66F100A8864D /* M3AccessibleUIElement.h in Headers */,
 				99FEDDF3149E285A0051CF23 /* PossumTest.h in Headers */,
+				99FEDE0C14A0E8630051CF23 /* POSMenuObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +606,7 @@
 				99C4B9D0144B344300FC8A13 /* POSPopUpButton.m in Sources */,
 				993EBB0E144B66F100A8864D /* M3AccessibilityController.m in Sources */,
 				993EBB10144B66F100A8864D /* M3AccessibleUIElement.m in Sources */,
+				99FEDE0D14A0E8630051CF23 /* POSMenuObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +619,10 @@
 				99FEDDF9149E67470051CF23 /* POSTestRoot.m in Sources */,
 				99FEDDFC149FC83B0051CF23 /* M3FakeAccessibleUIElement.m in Sources */,
 				99FEDDFF14A0C22B0051CF23 /* POSToolbarTests.m in Sources */,
+				99FEDE0314A0DBD30051CF23 /* POSMenuBarTests.m in Sources */,
+				99FEDE0614A0E1C60051CF23 /* POSMenuBarItemTests.m in Sources */,
+				99FEDE1014A0E90B0051CF23 /* POSMenuObjectTests.m in Sources */,
+				99FEDE1314A0EAD20051CF23 /* POSMenuItemTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,8 +18,6 @@ typedef enum {
 
 @interface POSButton : POSControl 
 
-//children is nil
-
 @property (assign, getter=isFocused) BOOL focused;
 
 @property (readonly) NSString *title;

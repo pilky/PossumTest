@@ -10,50 +10,19 @@
 
 @implementation POSMenuBarItem
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
-}
-
-
+//*****//
 - (NSString *)title {
-	return nil;
-
+	return [self valueForAttribute:NSAccessibilityTitleAttribute];
 }
 
-
-- (POSMenuBar *)menuBar {
-	return nil;
-
-}
-
-
+//*****//
 - (BOOL)isSelected {
-	return NO;
-
+	return [[self valueForAttribute:NSAccessibilitySelectedAttribute] boolValue];
 }
 
-
+//*****//
 - (void)setSelected:(BOOL)aSelected {
-
-}
-
-
-- (BOOL)isEnabled {
-	return NO;
-
-}
-
-
-- (void)press {
-
-}
-
-
-- (void)cancel {
-
+	[self setValue:[NSNumber numberWithBool:aSelected] forAttribute:NSAccessibilitySelectedAttribute];
 }
 
 @end

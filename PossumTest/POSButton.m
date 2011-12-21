@@ -10,46 +10,40 @@
 
 @implementation POSButton
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
-}
-
-
-- (BOOL)isFocused {
-	return NO;
-
-}
-
+@dynamic focused;
 
 - (void)setFocused:(BOOL)aFocused {
-
+	[self setValue:[NSNumber numberWithBool:aFocused] forAttribute:NSAccessibilityFocusedAttribute];
 }
 
 
 - (NSString *)title {
-	return nil;
+	return [self valueForAttribute:NSAccessibilityTitleAttribute];
 
 }
 
 
 - (POSButtonType)type {
-	POSButtonType result;
-	return result;
+	NSString *role = [self valueForAttribute:NSAccessibilityRoleAttribute];
+	if ([role isEqualToString:NSAccessibilityDisclosureTriangleRole])
+		return POSButtonTypeDisclosure;
+	if ([role isEqualToString:NSAccessibilityCheckBoxRole])
+		return POSButtonTypeCheckBox;
+	if ([role isEqualToString:NSAccessibilityRadioButtonRole])
+		return POSButtonTypeRadio;
+	return POSButtonTypeNormal;
 
 }
 
 
 - (NSInteger)value {
-	return 0;
+	return [[self valueForAttribute:NSAccessibilityTitleAttribute] integerValue];
 
 }
 
 
 - (void)press {
-
+	[self performAction:NSAccessibilityPressAction];
 }
 
 @end

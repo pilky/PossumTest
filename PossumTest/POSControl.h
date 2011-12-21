@@ -11,6 +11,10 @@
 
 @interface POSControl : POSUIElement 
 
+/***************************
+ Is the menu bar item enabled
+ @since PossumTest 1.0 or later
+ **************************/
 @property (readonly, getter=isEnabled) BOOL enabled;
 
 @end

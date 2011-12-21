@@ -10,16 +10,8 @@
 
 @implementation POSControl
 
-- (id)init {
-	if ((self = [super init])) {
-		// Initialization code here.
-	}
-	return self;
-}
-
-
 - (BOOL)isEnabled {
-	return NO;
+	return [[self valueForAttribute:NSAccessibilityEnabledAttribute] boolValue];
 
 }
 
